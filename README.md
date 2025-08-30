@@ -1,6 +1,6 @@
 # SauceDemo Automation (Behave + Selenium + Python)
 
-This repository contains automation test scripts for the [SauceDemo](https://www.saucedemo.com/) application.  
+This repository contains automation test scripts for the [SauceDemo](https://www.saucedemo.com/v1/inventory.html) application.  
 The project uses **Behave (BDD framework)** with **Selenium WebDriver** to automate end-to-end test scenarios such as login, adding products to cart, and completing checkout.
 
 ---
