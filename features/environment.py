@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 def before_all(context):
     context.driver=webdriver.Chrome()
-    context.driver.get("https://www.saucedemo.com/v1/inventory.html")
+    context.driver.get("https://www.saucedemo.com/v1/index.html")
     context.driver.maximize_window()
     context.driver.implicitly_wait(10)
 
