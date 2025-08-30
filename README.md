@@ -1,7 +1,7 @@
 # SauceDemo Automation (Behave + Selenium + Python)
 
 This repository contains automation test scripts for the [SauceDemo](https://www.saucedemo.com/v1/inventory.html) application.  
-The project uses **Behave (BDD framework)** with **Selenium WebDriver** to automate end-to-end test scenarios such as  adding products to cart, and completing checkout.
+The project uses **Behave (BDD framework)** with **Selenium WebDriver** to automate end-to-end test scenarios such as login, adding products to cart, and completing checkout.
 
 ---
 
@@ -21,8 +21,10 @@ SauceDemo/
 │
 ├── features/
 │ ├── addtocart.feature # Feature files (BDD scenarios in Gherkin syntax)
+| └── login.feature
 │ └── steps/
 │ ├── addtocart.py # Step definitions for adding the product
+| └──login.py
 │ 
 │
 ├── environment.py # Hooks (before_all, after_all for WebDriver setup/teardown)
@@ -76,6 +78,16 @@ reports/behave_report.html
 
 
 ✅ Example Scenarios
+
+Login
+Feature: User should able to Login
+  Scenario: User should be able to login with valid credentials
+  Given the user is on the login page
+  When the user enters username "standard_user" and password "secret_sauce"
+  And clicks on the login button
+  Then the user should be redirected to the products page
+
+Add to cart  
 Scenario: User should be able to add a product to the cart
     Given the user is on the products page
     When the user clicks on "Add to Cart"
